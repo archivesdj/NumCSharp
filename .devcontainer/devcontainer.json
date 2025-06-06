@@ -1,0 +1,17 @@
+{
+  "name": "NumCSharp",
+  "image": "mcr.microsoft.com/dotnet/sdk:8.0",
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "postCreateCommand": "sudo apt update && sudo apt install -y libopenblas-dev",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  }
+}
