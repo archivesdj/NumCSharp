@@ -5,13 +5,16 @@
     "ghcr.io/devcontainers/features/dotnet:2": {},
     "ghcr.io/devcontainers/features/git:1": {}
   },
-  "postCreateCommand": "sudo apt update && sudo apt install -y libopenblas-dev",
+  "postCreateCommand": "apt update && apt install -y libopenblas-dev && dotnet restore",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-dotnettools.csharp",
-        "ms-vscode.vscode-typescript-next"
-      ]
+        "ms-vscode.vscode-language-pack-en"
+      ],
+      "settings": {
+        "locale": "en"
+      }
     }
   }
 }
